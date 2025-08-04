@@ -29,8 +29,8 @@ A sophisticated AI-powered chatbot for taking restaurant food orders, built with
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/food-order-chatbot.git
-cd food-order-chatbot
+git clone https://github.com/khushbu311/aiagent.git
+cd aiagent
 ```
 
 2. Install dependencies:
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 3. Set up environment variables:
 ```bash
 # Create .env file
-echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
+echo "GROQ_API_KEY=your_groq_api_key_here" > .env
 ```
 
 4. Run the application:
@@ -60,7 +60,7 @@ streamlit run app.py
 ## Technical Implementation
 
 ### RAG System
-- Uses OpenAI embeddings for menu item vectorization
+- Uses GROQAI embeddings for menu item vectorization
 - ChromaDB for efficient similarity search
 - Contextual menu recommendations
 
@@ -79,11 +79,11 @@ streamlit run app.py
 
 ## API Integration
 
-The system uses OpenAI's GPT-3.5-turbo for natural language processing. Make sure to:
-1. Get an OpenAI API key
-2. Set appropriate usage limits
-3. Monitor API costs
-
+The system uses GROQ's GPT-3.5-turbo for natural language processing. Make sure to:
+- Sign up and obtain an API key from https://console.groq.com
+- Use the llama3-70b-8192 model for optimized inference performance
+- Integrate using the Groq-compatible OpenAI-style API endpoint
+- Monitor latency, throughput, and usage from the Groq console
 
 
 ## Testing
@@ -94,14 +94,6 @@ Test the chatbot with various scenarios:
 - Menu queries: "What desserts do you have?"
 - Recommendations: "What's good here?"
 
-## Deployment
-
-For production deployment:
-1. Use a production database (PostgreSQL)
-2. Set up proper logging
-3. Add authentication
-4. Use environment-specific configurations
-5. Deploy on cloud platforms (AWS, GCP, Azure)
 
 ## Contributing
 
@@ -118,7 +110,7 @@ MIT License - see LICENSE file for details.
 
 ## 7. .env.example
 ```
-OPENAI_API_KEY=your_openai_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
 This implementation provides:
